@@ -1,0 +1,299 @@
+.App {
+  text-align: center;
+}
+html, body, #root, .App {
+  height: 100%;
+    width: 100%;
+    position: absolute;
+} 
+/* div{
+  text-align: center;
+} */
+/* input[type=text] {
+  border-left: 1px solid ;
+  width : 40 ;
+  align-items: center;
+  border: 1 px;
+} */
+
+.but {    
+  background-color:black;
+  color:white;
+  border: 2px solid black;
+  padding: 50 50;
+  width: 150px;
+  height: 50px;
+
+}
+.but1{
+  
+  background-color: white;
+  color: black;
+  padding: 60 60;
+  width: 50px;
+  height: 30px;
+
+}
+
+.but1:hover{
+  background-color: #e7e7e7;
+  
+}
+.but:hover{
+  background-color: #e7e7e7;
+  color: black;
+}
+.align{
+    text-align: left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+.link{
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: large;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  color: white;
+}
+.link :hover{
+  color:white;
+}
+.divcss{
+  text-align: left;
+  margin-left: 30%;
+}
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+td{
+  text-align:left;
+  width : 600px;
+  height: 50px;
+  padding: 15px;
+}
+th{
+  text-align:left;
+  width :40%;
+  padding: 15px;
+}
+.disImg{
+  text-align:center;
+  width: 200px;
+}
+.disName{
+  text-align: justify;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popup{
+  /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px  ; */
+}
+.show{
+  width: 700px;
+  height: 100px;
+  border: 0px solid  black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: 336px;
+}
+.ifr{
+  text-align: center;
+  
+}
+.guess{
+  text-align: center;
+}
+.cont{
+  backdrop-filter: blur(3.5px);
+}
+
+.part{
+    position: "absolute";
+    top: 70;
+    left: 0;
+    width: "100%";
+    height: "100%";
+}
+.display{
+  width: 100%;
+  height: 70px;
+  background-color: wheat;
+  vertical-align: middle;
+  
+}
+.divbut{
+  text-align: center;
+  width: 300px;
+  margin-left: 540px;
+  height: 50px;
+}
+.center{
+  margin-left: 40%;
+  text-align: inherit;
+  height: 100px;
+}
+.piano{
+  text-align: left;
+  margin-left: 0;
+}
+.sl{
+  /* background-image: url("sl5.jpg"); */
+  top: 0;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  height: 100%;
+}
+.row{
+  filter: blur(0px);
+}
+.input{
+  width:80%
+}
+.width{
+  width : 50%;
+  margin-left: 25%;
+  color:black
+}
+
+.text{
+  color: #101820FF;
+}
+.showAlbum :hover{
+  background-color: 	#88af95;
+
+}
+.displayalbum{
+  width: 250px;
+  height: 300px;
+  padding-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border:black .2px solid;
+}
+.bg{
+  height: 100%;
+}
+.bgimg{
+  width: 526px;
+  padding: 2px;
+  margin-left: 55%;
+  margin-top: 195px;
+
+  height: 300px;
+  border: black 2px solid;
+
+}
+.bgimg :hover{
+  
+}
+.div3{
+  width: 100%;
+}
+Col{
+  text-align: center;
+}
+
+
+
+
+
+.loginBG{
+  background-image: url("icon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+}
+@media (max-width: 767px) { 
+  .grid-container { 
+    grid-auto-flow: row;
+  }
+}
+.container-fluid,
+.row-fluid { height: inherit; }
+Container {
+  flex-wrap: wrap ;
+}
+.box {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.abc{
+  height: 50%;
+    width: 300px;
+}
+.navbar-collapse{
+  text-align: left;
+  margin-left: auto;
+  align-items: flex-start;
+  height: auto;
+  width: auto;
+}
+
+
+
+
+
+
+
+.card1{
+  margin-top:13%
+}
+.card1-body{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.b-w{
+  width:150px;
+}
+.center{
+  text-align: center;
+}
+.dispItems:hover{
+  transform: scaleX(1.02) scaleY(1.01);
+  background-color:	#ebf5f0;
+  font-size: 12 0%;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.dispItems{
+  margin-top: 15px;
+  border: "0.1px grey solid";
+  transition: transform .1s;
+  background-color:#F8F8FF;
+ 
+}
