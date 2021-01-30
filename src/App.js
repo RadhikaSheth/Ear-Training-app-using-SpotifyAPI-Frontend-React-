@@ -7,7 +7,6 @@ import SpotifyLogin from "./SpotifyLogin";
 import Rdirect from "./Rdirect";
 import Playlist from "./Playlist";
 import PlaylistTracks from "./PlaylistTracks";
-import Example from "./Example";
 import Artist from "./Artist";
 import ArtistTracks from "./ArtistTracks";
 import AlbumTracks from "./AlbumTracks";
@@ -35,7 +34,6 @@ function App(){
         <Route path="/home" component={Home} />
         <Route path="/playlist" exact component={Playlist} />
         <Route path= "/playlistTrack/:id" component={PlaylistTracks} />
-        <Route path ="/example" component = {Example} />
         <Route path ="/searchAlbum" component ={Album} />
         <Route path = "/albumTracks/:id" component={AlbumTracks} /> 
         <Route path ="/searchArtist" component ={Artist} />

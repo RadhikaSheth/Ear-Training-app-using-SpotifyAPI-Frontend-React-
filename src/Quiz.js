@@ -4,7 +4,7 @@ import "./App.css";
 import ls from 'local-storage';
 import Modal from 'react-modal';
 import {Container, Row, Col,Button, Form,Card,Toast} from 'react-bootstrap';
-import Image from "./bg001.jpg";
+import Image from "./score_card.jpg";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 //for importing piano

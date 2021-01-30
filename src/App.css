@@ -1,20 +1,6 @@
 .App {
   text-align: center;
 }
-html, body, #root, .App {
-  height: 100%;
-    width: 100%;
-    position: absolute;
-} 
-/* div{
-  text-align: center;
-} */
-/* input[type=text] {
-  border-left: 1px solid ;
-  width : 40 ;
-  align-items: center;
-  border: 1 px;
-} */
 
 .but {    
   background-color:black;
