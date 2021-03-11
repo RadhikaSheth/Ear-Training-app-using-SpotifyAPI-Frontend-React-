@@ -11,6 +11,7 @@ import Artist from "./Artist";
 import ArtistTracks from "./ArtistTracks";
 import AlbumTracks from "./AlbumTracks";
 import Album from "./Album";
+import Profile from "./Profile";
 import { withRouter } from "react-router-dom";
 import Home from "./Home";
 
@@ -30,6 +31,7 @@ function App(){
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/login" component={SpotifyLogin} />  
+        <Route path="/aboutMe" component={Profile}/>
         <Route path="/redirect" component={Rdirect} />
         <Route path="/home" component={Home} />
         <Route path="/playlist" exact component={Playlist} />

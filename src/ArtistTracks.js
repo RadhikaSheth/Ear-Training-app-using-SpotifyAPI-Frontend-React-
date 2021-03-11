@@ -38,8 +38,11 @@ class ArtistTracks extends React.Component{
         return(
             <div>
                 {this.state.dir ?
-                    <Quiz arr={this.state.songs} />:
-                    null
+                    <div>
+                    {ls.set('quizType','Artist Top Tracks')}  
+                    <Quiz arr={this.state.songs} quizID={this.state.listId}/>
+                    </div>
+                    :null
                 }
             </div>
         )
