@@ -8,6 +8,10 @@ const AT = ls.get('accessToken');
 class Home extends React.Component{
     componentDidMount(){
         SpotifyWebApi.setAccessToken(AT);
+        SpotifyWebApi.getMe()
+            .then((response) => {
+                ls.set('userID',response.id)
+            })
     }
     render(){
         return(

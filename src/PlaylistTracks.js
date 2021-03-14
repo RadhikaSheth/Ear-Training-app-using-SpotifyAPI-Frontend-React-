@@ -4,6 +4,7 @@ import ls from 'local-storage';
 import Quiz from "./Quiz";
 const SpotifyWebApi = new Spotify();
 const AT = ls.get('accessToken');
+var userID = ls.get('userID');
 class PlaylistTracks extends React.Component{
     constructor(props){
         super(props);
@@ -15,19 +16,10 @@ class PlaylistTracks extends React.Component{
     }
     componentDidMount(){
         SpotifyWebApi.setAccessToken(AT);
-        this.getUid();
-    }
-    getUid() {
-        SpotifyWebApi.getMe()
-            .then((response) => {
-                this.setState({
-                    u_id: response.id,
-                })
-                this.getSongs();
-            })
+        this.getSongs();
     }
     getSongs() {
-        SpotifyWebApi.getPlaylistTracks(this.state.u_id, this.state.pid)
+        SpotifyWebApi.getPlaylistTracks(userID, this.state.pid)
             .then((response) => {
                 response.items.map((item) => {
                     this.setState({
@@ -49,8 +41,11 @@ class PlaylistTracks extends React.Component{
         return(
             <div>
                 {this.state.res ?
-                    <Quiz arr={this.state.songs} />:
-                    null
+                    <div>
+                    {ls.set('quizType','Playlist')}
+                    <Quiz arr={this.state.songs} quizID={this.state.pid}/>
+                    </div>
+                    :null
                 }
             </div>
         )

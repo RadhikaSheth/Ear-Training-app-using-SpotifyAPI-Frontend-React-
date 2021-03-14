@@ -19,7 +19,6 @@ class AlbumTracks extends React.Component{
         this.getSongs();
     }
     getSongs() {
-        
             SpotifyWebApi.getAlbumTracks(this.state.listId)
             .then((response) => {
                 response.items.map((item) => {
@@ -33,17 +32,18 @@ class AlbumTracks extends React.Component{
                 })
                 this.setState({
                     dir : true
-
                 })
             });
-        
     }
     render(){
         return(
             <div>
                 {this.state.dir ?
-                    <Quiz arr={this.state.songs} />:
-                    null
+                    <div>
+                    {ls.set('quizType','Album Tracks')}
+                    <Quiz arr={this.state.songs} quizID={this.state.listId}/>
+                    </div>
+                    :null
                 }
             </div>
         )

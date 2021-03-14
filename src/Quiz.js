@@ -6,12 +6,14 @@ import Modal from 'react-modal';
 import {Container, Row, Col,Button, Form,Card,Toast} from 'react-bootstrap';
 import Image from "./score_card.jpg";
 import {toast} from 'react-toastify';
+import axios from "axios"
 import 'react-toastify/dist/ReactToastify.css';
 //for importing piano
 import DimensionsProvider from './DimensionsProvider.js';
 import SoundfontProvider from './SoundfontProvider';
 import { Piano, KeyboardShortcuts, MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
+
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const soundfontHostname = 'https://d1pzp51pvbm36p.cloudfront.net';
 const noteRange = {
@@ -60,8 +62,11 @@ const SpotifyWebApi = new Spotify();
 const AT = ls.get('accessToken');
 class Quiz extends React.Component {
     constructor(props) {
-        super(props);   
-        this.state = {  
+        super(props);
+        var today = new Date(), 
+        date = today.getDate() + '-' + (today.getMonth() + 1)  +  '-' + today.getFullYear();  
+        this.state = { 
+            currentDate: date, 
             api_key: 0,
             api_mode:0,
             correct :0,
@@ -113,6 +118,24 @@ class Quiz extends React.Component {
         }
     }
     finalResult(){
+        var quizdetails={
+            userId : ls.get('userID'),
+            quizDate : this.state.currentDate, 
+            quizType : ls.get('quizType'),
+            quizId: this.props.quizID,
+            correctVal: this.state.correct,
+            incorrectVal : this.state.incorrect,
+            skippedVal : this.state.song.length - this.state.correct -this.state.incorrect
+        }
+        axios.post('http://localhost:8080/entry',quizdetails,{
+            params:{
+                userId: ls.get('userID'),
+                accessToken : ls.get('accessToken')
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
         this.setState({
             final:true
         })
