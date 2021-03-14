@@ -78,4 +78,4 @@ Here are some screenshots of the functioning of the project:
 ![Screenshot from 2021-01-25 10-52-34](https://user-images.githubusercontent.com/43770974/110728583-5b3bd680-8243-11eb-84f0-95fe5b4bf376.png)
 ![Screenshot from 2021-01-28 08-22-09](https://user-images.githubusercontent.com/43770974/110728677-79093b80-8243-11eb-9227-d5c5c34e5dc3.png)
 ![Screenshot from 2021-03-04 17-27-10](https://user-images.githubusercontent.com/43770974/110728718-87575780-8243-11eb-9fad-4cd6e2f2c326.png)
->>>>>>> 516bc04d637cb5e23eaccf2dab5c87c413414ce8
+
