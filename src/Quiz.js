@@ -129,10 +129,7 @@ class Quiz extends React.Component {
         }
         axios.post('http://localhost:8080/entry',quizdetails,{
             params:{
-<<<<<<< HEAD
                 userId: ls.get('userID'),
-=======
->>>>>>> 516bc04d637cb5e23eaccf2dab5c87c413414ce8
                 accessToken : ls.get('accessToken')
             }
         })
