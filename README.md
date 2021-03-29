@@ -2,10 +2,17 @@
 
 Link to the blog explaining the project in a detailed way:
 
+1. Introduction to OAuth2 Spotify Login with React:
+
 https://shethradhika9.medium.com/building-an-ear-training-app-using-spotify-and-react-part-1-oauth2-spotify-login-with-react-e5ffcf2f4d36
+
+2. Building the Interactive Quiz UI:
 
 https://shethradhika9.medium.com/building-an-ear-training-app-using-spotify-and-react-part-2-interactive-quiz-ui-e5d250f0022d
 
+3. Building Java Backend and REST API calls at both frontend and backend.
+
+https://shethradhika9.medium.com/building-an-ear-training-app-using-spotify-and-react-part-3-building-java-backend-and-rest-api-536b3acc7f8b
 
 ABOUT:
 
