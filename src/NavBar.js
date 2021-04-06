@@ -1,18 +1,18 @@
 import React from "react"
-import {Navbar,Nav} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 var isprofile = false;
-class NavBar extends React.Component{
-    constructor(){
+class NavBar extends React.Component {
+    constructor() {
         super();
-        if(window.location.pathname == '/aboutMe'){
+        if (window.location.pathname === '/aboutMe') {
             isprofile = true;
-        }else{
+        } else {
             isprofile = false;
         }
     }
-    render(){
-        return(
-            <Navbar fluid collapseOnSelect  style={{backgroundColor: isprofile ? "	#6eb5aa" : "#479c9d"}}  variant="dark" expand="lg" >
+    render() {
+        return (
+            <Navbar fluid="true" collapseOnSelect style={{ backgroundColor: isprofile ? "#6eb5aa" : "#479c9d" }} variant="dark" expand="lg" >
                 <Navbar.Brand href="/home"><b>MUSIC APP</b></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" >

@@ -4,22 +4,22 @@ import ls from 'local-storage';
 import Quiz from "./Quiz";
 const SpotifyWebApi = new Spotify();
 const AT = ls.get('accessToken');
-class AlbumTracks extends React.Component{
-    constructor(props){
+class AlbumTracks extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             listId: this.props.match.params.id,
-            songs : [],
-            dir: false
-            
+            songs: [],
+            displayResult: false
+
         }
     }
-    componentDidMount(){
+    componentDidMount() {
         SpotifyWebApi.setAccessToken(AT);
         this.getSongs();
     }
     getSongs() {
-            SpotifyWebApi.getAlbumTracks(this.state.listId)
+        SpotifyWebApi.getAlbumTracks(this.state.listId)
             .then((response) => {
                 response.items.map((item) => {
                     this.setState({
@@ -31,19 +31,19 @@ class AlbumTracks extends React.Component{
                     })
                 })
                 this.setState({
-                    dir : true
+                    displayResult: true
                 })
             });
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                {this.state.dir ?
+                {this.state.displayResult ?
                     <div>
-                    {ls.set('quizType','Album Tracks')}
-                    <Quiz arr={this.state.songs} quizID={this.state.listId}/>
+                        {ls.set('quizType', 'Album Tracks')}
+                        <Quiz arr={this.state.songs} quizID={this.state.listId} />
                     </div>
-                    :null
+                    : null
                 }
             </div>
         )

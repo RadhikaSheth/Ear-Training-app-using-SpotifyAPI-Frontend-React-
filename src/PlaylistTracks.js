@@ -5,21 +5,21 @@ import Quiz from "./Quiz";
 const SpotifyWebApi = new Spotify();
 const AT = ls.get('accessToken');
 var userID = ls.get('userID');
-class PlaylistTracks extends React.Component{
-    constructor(props){
+class PlaylistTracks extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={
-            pid: this.props.match.params.id,
-            songs : [],
-            res: false
+        this.state = {
+            playlistID: this.props.match.params.id,
+            songs: [],
+            displayResult: false
         }
     }
-    componentDidMount(){
+    componentDidMount() {
         SpotifyWebApi.setAccessToken(AT);
         this.getSongs();
     }
     getSongs() {
-        SpotifyWebApi.getPlaylistTracks(userID, this.state.pid)
+        SpotifyWebApi.getPlaylistTracks(userID, this.state.playlistID)
             .then((response) => {
                 response.items.map((item) => {
                     this.setState({
@@ -32,20 +32,20 @@ class PlaylistTracks extends React.Component{
                     })
                 })
                 this.setState({
-                    res : true,
+                    displayResult: true,
                 })
             });
-        
+
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                {this.state.res ?
+                {this.state.displayResult ?
                     <div>
-                    {ls.set('quizType','Playlist')}
-                    <Quiz arr={this.state.songs} quizID={this.state.pid}/>
+                        {ls.set('quizType', 'Playlist')}
+                        <Quiz arr={this.state.songs} quizID={this.state.pid} />
                     </div>
-                    :null
+                    : null
                 }
             </div>
         )

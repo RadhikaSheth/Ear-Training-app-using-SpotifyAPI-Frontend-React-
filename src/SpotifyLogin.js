@@ -2,7 +2,6 @@ import React,{useEffect} from "react"
 function SpotifyLogin(){
     
     const REACT_APP_CLIENT_ID = 'f18222a3046041d5baa40d833aa1e018'
-    const REACT_APP_AUTHORIZE_URL = "https://accounts.spotify.com/authorize"
     const REACT_APP_REDIRECT_URL = "http://localhost:3000/redirect"
     var scope = 'playlist-read-private user-read-private user-read-email user-read-playback-state user-top-read playlist-read-private';
     const generateRandomString = function(length) {
