@@ -22,7 +22,7 @@ class Profile extends React.Component {
     }
     componentDidMount() {
         SpotifyWebApi.setAccessToken(AT);
-        axios.get('http://localhost:8080/user', {
+        axios.get('https://ear-training-app-backend.herokuapp.com/user', {
             params: {
                 userId: userID,
                 accessToken: AT

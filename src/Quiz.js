@@ -131,7 +131,7 @@ class Quiz extends React.Component {
             incorrectVal: this.state.incorrect,
             skippedVal: this.state.song.length - this.state.correct - this.state.incorrect
         }
-        axios.post('http://localhost:8080/entry', quizdetails, {
+        axios.post('https://ear-training-app-backend.herokuapp.com/entry', quizdetails, {
             params: {
                 userId: ls.get('userID'),
                 accessToken: ls.get('accessToken')
